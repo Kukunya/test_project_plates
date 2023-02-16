@@ -12,12 +12,3 @@ class PlatesDatabase(db.Model):
     def __init__(self, plate):
         self.plate = plate
         self.id = uuid.uuid4()
-
-
-def add(self, plate_to_add):
-    db.session.add(PlatesDatabase(plate_to_add))
-    db.session.commit()
-
-
-def get(self, uuid):
-    return PlatesDatabase.query.filter_by(plate=uuid).first()
